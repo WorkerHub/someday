@@ -2,6 +2,18 @@
 
 在未来某个日期时间，把一封信通过邮件寄到指定邮箱 —— 小圈子多用户的定时寄信服务。线上域名：someday.oneboy.app。
 
+## 界面预览
+
+登录后的工作台按「草稿 / 待寄出 / 已寄出 / 失败」分类查看信件；写信页左侧编辑、右侧按邮件实际效果实时预览；系统管理页管注册开关、用户与系统维护。
+
+<p align="center">
+  <img src=".github/assets/screenshots/letters.webp" alt="我的信件工作台：问候语下方是草稿、待寄出、已寄出、失败四个页签与各自的信件数量，列表中每封信显示状态徽标、写于日期、收件人数与「公开到信墙」标记，右侧是编辑与删除操作" width="900" />
+</p>
+
+| 写信（核心功能） | 系统管理 |
+| --- | --- |
+| <img src=".github/assets/screenshots/compose.webp" alt="写信页：标题、正文富文本编辑器与工具栏、收件人选择、送达时间与「公开到信墙」开关，右侧是按邮件实际渲染效果生成的实时预览" width="440" /> | <img src=".github/assets/screenshots/admin.webp" alt="系统管理页：注册开关、按待批准与管理员列出账号的用户管理（含批准操作），以及升级数据库与 setup 页面开关组成的系统维护" width="440" /> |
+
 ## 技术栈
 
 - monorepo：pnpm workspace，`web/` + `worker/`
