@@ -1,0 +1,53 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "schedule": ["before 6am on Monday"],
+  "timezone": "Asia/Shanghai",
+  "automerge": true,
+  "platformAutomerge": true,
+  "labels": ["dependencies"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on the first day of the month"]
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "groupName": "patch updates",
+      "automerge": true,
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "groupName": "minor updates",
+      "automerge": true,
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "groupName": "Cloudflare packages",
+      "matchPackageNames": ["wrangler", "/^@cloudflare//"]
+    },
+    {
+      "groupName": "SimpleWebAuthn packages",
+      "matchPackageNames": ["/^@simplewebauthn//"]
+    },
+    {
+      "groupName": "Radix UI packages",
+      "matchPackageNames": ["/^@radix-ui//"]
+    },
+    {
+      "groupName": "TipTap packages",
+      "matchPackageNames": ["/^@tiptap//"]
+    },
+    {
+      "groupName": "Tailwind CSS packages",
+      "matchPackageNames": ["/^tailwindcss/", "/^@tailwindcss//"]
+    },
+    {
+      "groupName": "React packages",
+      "matchPackageNames": ["react", "react-dom", "/^@types/react/"]
+    }
+  ]
+}
